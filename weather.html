@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Weather Forecast</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="weather.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+            integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="config.js"></script>
+        <script src="weather.js"></script>
+    </head>
+    <body>
+        <div class="title-container">
+            <h1 class="page-title">Weather Forecast</h1>
+            <i id="reset" class="fa-solid fa-x"></i>
+        </div>
+        <section class="weather-container">
+            <label for="city">City</label>
+            <select name="city" id="city">
+                <option value="" disabled selected>Select a city</option>
+                <option value="Toronto">Toronto</option>
+                <option value="Montreal">Montreal</option>
+                <option value="Vancouver">Vancouver</option>
+                <option value="Calgary">Calgary</option>
+                <option value="Ottawa">Ottawa</option>
+                <option value="Winnipeg">Winnipeg</option>
+            </select>
+            <div id="forecast"></div>
+            <div class="button-container"><button id="get-weather" class="disabled">Apply</button></div>
+            <p class="error-msg"></p>
+        </section>
+    </body>
+</html>

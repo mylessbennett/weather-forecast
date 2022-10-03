@@ -1,0 +1,143 @@
+*, body {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+label,
+select {
+    display: block;
+    width: 100%;
+    font-size: 28px;
+    padding: 12px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+}
+
+.page-title,
+#reset {
+    font-size: 32px;
+    font-weight: bold;
+    color: #E6E6E6;
+    margin: 0;
+    padding: 16px;
+}
+
+.page-title {
+    width: 100%;
+}
+
+.title-container {
+    background: #2A2A2A;
+    display: flex;
+    align-items: center;
+}
+
+#reset {
+    justify-self: flex-end;
+    cursor: pointer;
+}
+
+.title-container,
+.weather-container {
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+#get-weather {
+    color: #FCFFFF;
+    background-color: #CF262A;
+    max-width: 200px;
+    width: 100%;
+    height: 50px;
+    float: none;
+    margin: 16px auto;
+    border: none;
+    cursor: pointer;
+    display: block;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#get-weather,
+.date,
+.temp {
+    font-size: 18px;
+}
+
+#get-weather.disabled {
+    background: #E6E6E6;
+    color: #999999;
+}
+
+#forecast {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    margin: 16px 0;
+}
+
+#city {
+    font-weight: normal;
+    background: #E6E6E6;
+    border: none;
+    cursor: pointer;
+}
+
+.day-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 16px 0;
+}
+
+.weather-container {
+    padding: 0 16px;
+}
+
+.date {
+    font-weight: bold;
+}
+
+.temp {
+    font-weight: normal;
+}
+
+.error-msg {
+    color: #CF262A;
+    text-align: center;
+    display: none;
+}
+
+/* desktop + tablet adjustments */
+@media (min-width: 760px) {
+    .day-container {
+        margin: 0 16px;
+    }
+
+    #forecast {
+        flex-direction: row;
+    }
+
+    #get-weather {
+        float: right;
+        margin: 16px 0;
+    }
+
+    .error-msg {
+        text-align: right;
+    }
+}
